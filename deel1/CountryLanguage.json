@@ -13,7 +13,7 @@
         "type": "boolean"
       },
       "Percentage": {
-        "type": "null"
+        "type": "number"
       }
     },
     "required": [

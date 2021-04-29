@@ -16,13 +16,13 @@
         "type": "string"
       },
       "SurfaceArea": {
-        "type": "null"
+        "type": "number"
       },
       "Population": {
-        "type": "null"
+        "type": "number"
       },
       "Captital": {
-        "type": "null"
+        "type": "number"
       }
     },
     "required": [

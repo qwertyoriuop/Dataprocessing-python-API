@@ -4,7 +4,7 @@
     "type": "object",
     "properties": {
       "ID": {
-        "type": "null"
+        "type": "number"
       },
       "name": {
         "type": "string"
@@ -16,7 +16,7 @@
         "type": "string"
       },
       "Population": {
-        "type": "null"
+        "type": "number"
       }
     },
     "required": [
