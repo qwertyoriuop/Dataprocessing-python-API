@@ -1,6 +1,25 @@
 {
-    "CountryCode": "",
-    "Language": "",
-    "IsOfficial": false,
-    "Percentage": null
-}
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "CountryLanguage",
+    "type": "object",
+    "properties": {
+      "CountryCode": {
+        "type": "string"
+      },
+      "Language": {
+        "type": "string"
+      },
+      "IsOfficial": {
+        "type": "boolean"
+      },
+      "Percentage": {
+        "type": "null"
+      }
+    },
+    "required": [
+      "CountryCode",
+      "Language",
+      "IsOfficial",
+      "Percentage"
+    ]
+  }

@@ -1,3 +1,0 @@
-http://localhost:8000/countrylanguages/
-http://localhost:8000/countrys/
-http://localhost:8000/citys/

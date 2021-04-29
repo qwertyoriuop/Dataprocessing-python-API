@@ -1,9 +1,37 @@
 {
-    "Code": "",
-    "Name": "",
-    "Continent": "",
-    "Region": "",
-    "SurfaceArea": null,
-    "Population": null,
-    "Captital": null
-}
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Country",
+    "type": "object",
+    "properties": {
+      "Code": {
+        "type": "string"
+      },
+      "Name": {
+        "type": "string"
+      },
+      "Continent": {
+        "type": "string"
+      },
+      "Region": {
+        "type": "string"
+      },
+      "SurfaceArea": {
+        "type": "null"
+      },
+      "Population": {
+        "type": "null"
+      },
+      "Captital": {
+        "type": "null"
+      }
+    },
+    "required": [
+      "Code",
+      "Name",
+      "Continent",
+      "Region",
+      "SurfaceArea",
+      "Population",
+      "Captital"
+    ]
+  }

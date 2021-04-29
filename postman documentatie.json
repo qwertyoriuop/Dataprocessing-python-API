@@ -1,0 +1,1556 @@
+{
+	"info": {
+		"_postman_id": "90b1c7d3-aac2-4adc-b135-f655d81d0c98",
+		"name": "World",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "haalt details van alle steden op",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/citys/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"citys",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "haalt details van een stad op",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/citys/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"citys",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:16:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "584"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"ID\": 1,\n        \"name\": \"Amsterdam\",\n        \"CountryCode\": \"NLD\",\n        \"Disctrict\": \"Zuid-Holland\",\n        \"Population\": 713200\n    },\n    {\n        \"ID\": 129,\n        \"name\": \"Oranjestad\",\n        \"CountryCode\": \"ABW\",\n        \"Disctrict\": \"–\",\n        \"Population\": 29034\n    },\n    {\n        \"ID\": 2,\n        \"name\": \"Rotterdam\",\n        \"CountryCode\": \"NLD\",\n        \"Disctrict\": \"Zuid-Holland\",\n        \"Population\": 593321\n    },\n    {\n        \"ID\": 3813,\n        \"name\": \"Washington\",\n        \"CountryCode\": \"USA\",\n        \"Disctrict\": \"District of Columbia\",\n        \"Population\": 572059\n    },\n    {\n        \"ID\": 5,\n        \"name\": \"engelstanie\",\n        \"CountryCode\": \"ENG\",\n        \"Disctrict\": \"Disctrict engeland\",\n        \"Population\": 16\n    },\n    {\n        \"ID\": 123,\n        \"name\": \"verweggiestad\",\n        \"CountryCode\": \"VWS\",\n        \"Disctrict\": \"zuid-nergens\",\n        \"Population\": 1432\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "haalt details van een stad op",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/citys/123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"citys",
+								"123"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "haalt details van een stad op",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/citys/123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"citys",
+										"123"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:16:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "98"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ID\": 123,\n    \"name\": \"verweggiestad\",\n    \"CountryCode\": \"VWS\",\n    \"Disctrict\": \"zuid-nergens\",\n    \"Population\": 1432\n}"
+						}
+					]
+				},
+				{
+					"name": "maak een stad aan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\": 123,\r\n    \"name\": \"verweggiestad\",\r\n    \"CountryCode\": \"VWS\",\r\n    \"Disctrict\": \"zuid-nergens\",\r\n    \"Population\": 142\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/citys/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"citys",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "maak een stad aan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ID\": 123,\r\n    \"name\": \"verweggiestad\",\r\n    \"CountryCode\": \"VWS\",\r\n    \"Disctrict\": \"zuid-nergens\",\r\n    \"Population\": 142\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/citys/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"citys",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:14:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "97"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ID\": 123,\n    \"name\": \"verweggiestad\",\n    \"CountryCode\": \"VWS\",\n    \"Disctrict\": \"zuid-nergens\",\n    \"Population\": 142\n}"
+						}
+					]
+				},
+				{
+					"name": "verander details van een stad",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\": 123,\r\n    \"name\": \"verweggiestad\",\r\n    \"CountryCode\": \"VWS\",\r\n    \"Disctrict\": \"zuid-nergens\",\r\n    \"Population\": 1432\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/citys/123/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"citys",
+								"123",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "55921961",
+									"description": "(Required) ID of the user",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "verander details van een stad",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ID\": 123,\r\n    \"name\": \"verweggiestad\",\r\n    \"CountryCode\": \"VWS\",\r\n    \"Disctrict\": \"zuid-nergens\",\r\n    \"Population\": 1432\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/citys/123/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"citys",
+										"123",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "55921961",
+											"description": "(Required) ID of the user",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:15:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "98"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ID\": 123,\n    \"name\": \"verweggiestad\",\n    \"CountryCode\": \"VWS\",\n    \"Disctrict\": \"zuid-nergens\",\n    \"Population\": 1432\n}"
+						}
+					]
+				},
+				{
+					"name": "delete stad",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/citys/123/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"citys",
+								"123",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete stad",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/citys/123/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"citys",
+										"123",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:34:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Country",
+			"item": [
+				{
+					"name": "haalt details van alle Country's op",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/countrys/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"countrys",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "haalt details van alle Country's op",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/countrys/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"countrys",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:17:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "429"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"Code\": \"ABW\",\n        \"Name\": \"Aruba\",\n        \"Continent\": \"North America\",\n        \"Region\": \"Caribbean\",\n        \"SurfaceArea\": 193,\n        \"Population\": 103000,\n        \"Captital\": 129\n    },\n    {\n        \"Code\": \"NLD\",\n        \"Name\": \"Netherlands\",\n        \"Continent\": \"Europe\",\n        \"Region\": \"Western Europe\",\n        \"SurfaceArea\": 41526,\n        \"Population\": 15864000,\n        \"Captital\": 5\n    },\n    {\n        \"Code\": \"USA\",\n        \"Name\": \"United States\",\n        \"Continent\": \"North America\",\n        \"Region\": \"North America\",\n        \"SurfaceArea\": 9363520,\n        \"Population\": 278357000,\n        \"Captital\": 3813\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "haalt details van een country op",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/country/NLD",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"country",
+								"NLD"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "haalt details van een country op",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/countrys/VWS",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"countrys",
+										"VWS"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:24:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Code\": \"VWS\",\n    \"Name\": \"verweggiestan\",\n    \"Continent\": \"Europe\",\n    \"Region\": \"Western Europe\",\n    \"SurfaceArea\": 134,\n    \"Population\": 133,\n    \"Captital\": 123\n}"
+						}
+					]
+				},
+				{
+					"name": "maak een land aan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Code\": \"VWS\",\r\n    \"Name\": \"verweggiestan\",\r\n    \"Continent\": \"Europe\",\r\n    \"Region\": \"Western Europe\",\r\n    \"SurfaceArea\": 134,\r\n    \"Population\": 133,\r\n    \"Captital\": 123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/countrys/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"countrys",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "maak een land aan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Code\": \"VWS\",\r\n    \"Name\": \"verweggiestan\",\r\n    \"Continent\": \"Europe\",\r\n    \"Region\": \"Western Europe\",\r\n    \"SurfaceArea\": 134,\r\n    \"Population\": 133,\r\n    \"Captital\": 123\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/countrys/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"countrys",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:23:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Code\": \"VWS\",\n    \"Name\": \"verweggiestan\",\n    \"Continent\": \"Europe\",\n    \"Region\": \"Western Europe\",\n    \"SurfaceArea\": 134,\n    \"Population\": 133,\n    \"Captital\": 123\n}"
+						}
+					]
+				},
+				{
+					"name": "verander details van een land",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"verweggiestan\",\r\n    \"Continent\": \"Europe\",\r\n    \"Region\": \"Western Europe\",\r\n    \"SurfaceArea\": 134,\r\n    \"Population\": 13355,\r\n    \"Captital\": 123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/countrys/VWS/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"countrys",
+								"VWS",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "55921961",
+									"description": "(Required) ID of the user",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "verander details van een land",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"verweggiestan\",\r\n    \"Continent\": \"Europe\",\r\n    \"Region\": \"Western Europe\",\r\n    \"SurfaceArea\": 134,\r\n    \"Population\": 13355,\r\n    \"Captital\": 123\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/countrys/vws/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"countrys",
+										"vws",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "55921961",
+											"description": "(Required) ID of the user",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:25:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "138"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Code\": \"vws\",\n    \"Name\": \"verweggiestan\",\n    \"Continent\": \"Europe\",\n    \"Region\": \"Western Europe\",\n    \"SurfaceArea\": 134,\n    \"Population\": 13355,\n    \"Captital\": 123\n}"
+						},
+						{
+							"name": "verander details van een land",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"verweggiestan\",\r\n    \"Continent\": \"Europe\",\r\n    \"Region\": \"Western Europe\",\r\n    \"SurfaceArea\": 134,\r\n    \"Population\": 13355,\r\n    \"Captital\": 123\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/countrys/VWS/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"countrys",
+										"VWS",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "55921961",
+											"description": "(Required) ID of the user",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:29:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "138"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Code\": \"VWS\",\n    \"Name\": \"verweggiestan\",\n    \"Continent\": \"Europe\",\n    \"Region\": \"Western Europe\",\n    \"SurfaceArea\": 134,\n    \"Population\": 13355,\n    \"Captital\": 123\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete country",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/countrys/VWS/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"countrys",
+								"VWS",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete country",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/countrys/VWS/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"countrys",
+										"VWS",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:35:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CountryLanguage",
+			"item": [
+				{
+					"name": "haalt details van alle talen op",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/countrylanguages/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"countrylanguages",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "haalt details van alle talen op",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/countrylanguages/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"countrylanguages",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:32:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "328"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"CountryCode\": \"NLD\",\n        \"Language\": \"Dutch\",\n        \"IsOfficial\": true,\n        \"Percentage\": 95.6\n    },\n    {\n        \"CountryCode\": \"USA\",\n        \"Language\": \"English\",\n        \"IsOfficial\": true,\n        \"Percentage\": 86.2\n    },\n    {\n        \"CountryCode\": \"ABW\",\n        \"Language\": \"Papiamento\",\n        \"IsOfficial\": false,\n        \"Percentage\": 76.7\n    },\n    {\n        \"CountryCode\": \"VWS\",\n        \"Language\": \"verweggiestaans\",\n        \"IsOfficial\": true,\n        \"Percentage\": 100\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "haalt details van een country op",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/countrylanguages/NLD",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"countrylanguages",
+								"NLD"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "haalt details van een country op",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/countrylanguages/VWS",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"countrylanguages",
+										"VWS"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:32:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "87"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"CountryCode\": \"VWS\",\n    \"Language\": \"verweggiestaans\",\n    \"IsOfficial\": true,\n    \"Percentage\": 100\n}"
+						}
+					]
+				},
+				{
+					"name": "maak een taal aan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CountryCode\": \"VWS\",\r\n    \"Language\": \"verweggiestaans\",\r\n    \"IsOfficial\": true,\r\n    \"Percentage\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/countrylanguages/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"countrylanguages",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "maak een taal aan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CountryCode\": \"VWS\",\r\n    \"Language\": \"verweggiestaans\",\r\n    \"IsOfficial\": true,\r\n    \"Percentage\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/countrylanguages/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"countrylanguages",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:30:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "87"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"CountryCode\": \"VWS\",\n    \"Language\": \"verweggiestaans\",\n    \"IsOfficial\": true,\n    \"Percentage\": 100\n}"
+						}
+					]
+				},
+				{
+					"name": "verander details van een taal",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Language\": \"verweggiestaans\",\r\n    \"IsOfficial\": true,\r\n    \"Percentage\": 99.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/countrylanguages/VWS/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"countrylanguages",
+								"VWS",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "55921961",
+									"description": "(Required) ID of the user",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "verander details van een taal",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Language\": \"verweggiestaans\",\r\n    \"IsOfficial\": true,\r\n    \"Percentage\": 99.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/countrylanguages/VWS/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"countrylanguages",
+										"VWS",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "55921961",
+											"description": "(Required) ID of the user",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:32:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "86"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"CountryCode\": \"VWS\",\n    \"Language\": \"verweggiestaans\",\n    \"IsOfficial\": true,\n    \"Percentage\": 99\n}"
+						}
+					]
+				},
+				{
+					"name": "delete taal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/countrylanguages/VWS/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"countrylanguages",
+								"VWS",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete taal",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/countrylanguages/VWS/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"countrylanguages",
+										"VWS",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 07:36:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.4"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://petstore.swagger.io/v1",
+			"type": "string"
+		}
+	]
+}

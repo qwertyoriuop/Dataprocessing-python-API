@@ -1,7 +1,29 @@
 {
-    "ID": null,
-    "name": "",
-    "CountryCode": "",
-    "Disctrict": "",
-    "Population": null
-}
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "City",
+    "type": "object",
+    "properties": {
+      "ID": {
+        "type": "null"
+      },
+      "name": {
+        "type": "string"
+      },
+      "CountryCode": {
+        "type": "string"
+      },
+      "Disctrict": {
+        "type": "string"
+      },
+      "Population": {
+        "type": "null"
+      }
+    },
+    "required": [
+      "ID",
+      "name",
+      "CountryCode",
+      "Disctrict",
+      "Population"
+    ]
+  }

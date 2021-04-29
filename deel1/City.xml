@@ -1,7 +1,12 @@
-<City>
-    <ID></ID>
-    <name></name>
-    <CountryCode></CountryCode>
-    <Disctrict></Disctrict>
-    <Population></Population>
-</City>
+<?xml version="1.0"?>
+<xs:element name="City">
+<xs:complexType>
+    <xs:sequence>
+    <xs:element name="ID" />
+    <xs:element name="name" />
+    <xs:element name="CountryCode" />
+    <xs:element name="Disctrict" />
+    <xs:element name="Population" />
+    </xs:sequence>
+</xs:complexType>
+</xs:element>

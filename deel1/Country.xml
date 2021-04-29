@@ -1,9 +1,13 @@
-<Country>
-    <Code></Code>
-    <Name></Name>
-    <Continent></Continent>
-    <Region></Region>
-    <SurfaceArea></SurfaceArea>
-    <Population></Population>
-    <Population></Population>
-</Country>
+<?xml version="1.0"?>
+<xs:element name="Country">
+<xs:complexType>
+    <xs:sequence>
+    <xs:element name="Code" />
+    <xs:element name="Name" />
+    <xs:element name="Continent" />
+    <xs:element name="Region" />
+    <xs:element name="SurfaceArea" />
+    <xs:element maxOccurs="unbounded" name="Population" />
+    </xs:sequence>
+</xs:complexType>
+</xs:element>
