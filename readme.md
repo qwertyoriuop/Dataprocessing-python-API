@@ -14,7 +14,7 @@
 
 klik op deze link om bij de documentatie te komen 
 
-[link]: https://documenter.getpostman.com/view/14800580/TzK2Zu2S
+https://documenter.getpostman.com/view/14800580/TzK2Zu2S
 
 
 
